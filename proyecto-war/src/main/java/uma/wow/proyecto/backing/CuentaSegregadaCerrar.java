@@ -47,6 +47,12 @@ public class CuentaSegregadaCerrar {
 			
 			cuentaEJB.cierraCuenta(seg, usuario);
 			
+			FacesMessage fm = new FacesMessage("Cuenta Segregada cerrada con exito");
+			FacesContext.getCurrentInstance().addMessage("CuentaSegregadaCerrar:cuentaSegregadaCerrarClick", fm);
+			
+			return "mainAdmin.xhtml";
+			
+			
 		} catch (CuentaNoEncontrada e) {
 			FacesMessage fm = new FacesMessage("Cuenta no encontrada");
 			FacesContext.getCurrentInstance().addMessage("CuentaSegregadaCerrar", fm);

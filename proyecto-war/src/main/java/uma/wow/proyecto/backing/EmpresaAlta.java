@@ -64,7 +64,11 @@ public class EmpresaAlta implements Serializable{
 		try {
 			
 			usuario = sesion.getUsuario();
-			clienteEJB.altaCliente(empresa, usuario);;
+			clienteEJB.altaCliente(empresa, usuario);
+			
+			FacesMessage fm = new FacesMessage("La empresa ha sido dada de alta con exito");
+			FacesContext.getCurrentInstance().addMessage("EmpresaAlta:empresaAltaClick", fm);
+			
 			return "mainAdmin.xhtml";
 			
 		}catch (UsuarioNoEncontrado e) {

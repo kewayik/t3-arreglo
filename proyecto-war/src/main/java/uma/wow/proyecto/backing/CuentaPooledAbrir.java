@@ -82,7 +82,11 @@ public class CuentaPooledAbrir {
 					Empresa cliente = clienteEJB.devolverEmpresa(usuario.getCliente().getId());
 					cuentaEJB.creaCuenta(getPol(), cliente, usuario);
 				}
-	
+				
+				
+				FacesMessage fm = new FacesMessage("Cuenta Pooled creada con exito");
+				FacesContext.getCurrentInstance().addMessage("CuentaPooledAbrir:cuentaPooledAbrirClick", fm);
+				
 				return "mainAdmin.xhtml";
 				
 			}catch (ClienteNoEncontrado e) {

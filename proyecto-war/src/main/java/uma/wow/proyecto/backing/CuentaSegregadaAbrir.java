@@ -82,6 +82,9 @@ public class CuentaSegregadaAbrir {
 					cuentaEJB.creaCuenta(getSeg(), cliente, usuario);
 				}
 	
+				FacesMessage fm = new FacesMessage("Cuenta Segregada creada con exito");
+				FacesContext.getCurrentInstance().addMessage("CuentaSegregadaAbrir:cuentaSegregadaAbrirClick", fm);
+				
 				return "mainAdmin.xhtml";
 				
 			}catch (ClienteNoEncontrado e) {

@@ -62,6 +62,10 @@ public class EmpresaModificar implements Serializable{
 			
 			usuario = sesion.getUsuario();
 			clienteEJB.modificaCliente(empresa, usuario);
+			
+			FacesMessage fm = new FacesMessage("La empresa ha sido modificada con exito");
+			FacesContext.getCurrentInstance().addMessage("EmpresaModificar:empresaModificarClick", fm);
+			
 			return "mainAdmin.xhtml";
 			
 		}catch (UsuarioNoEncontrado e) {

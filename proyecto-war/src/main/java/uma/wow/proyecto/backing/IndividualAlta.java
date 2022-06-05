@@ -22,9 +22,7 @@ import uma.wow.proyecto.ejb.exceptions.UsuarioNoEncontrado;
 @SessionScoped
 public class IndividualAlta implements Serializable{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	@Inject
@@ -63,6 +61,10 @@ public class IndividualAlta implements Serializable{
 			
 			usuario = sesion.getUsuario();
 			clienteEJB.altaCliente(individual, usuario);
+			
+			FacesMessage fm = new FacesMessage("El cliente ha sido eliminado con éxito");
+			FacesContext.getCurrentInstance().addMessage("IndividualEliminar:individualEliminarClick", fm);
+			
 			return "mainAdmin.xhtml";
 			
 		}catch (UsuarioNoEncontrado e) {

@@ -55,6 +55,10 @@ public class IndividualModificar implements Serializable{
 		try {			
 			usuario = sesion.getUsuario();
 			clienteEJB.modificaCliente(individual, usuario);
+			
+			FacesMessage fm = new FacesMessage("El cliente ha sido modificado con éxito");
+			FacesContext.getCurrentInstance().addMessage("IndividualModificar:individualModificarClick", fm);
+			
 			return "mainAdmin.xhtml";
 			
 		}catch (UsuarioNoEncontrado e) {

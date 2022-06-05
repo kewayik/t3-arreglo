@@ -59,6 +59,10 @@ public class EmpresaEliminar implements Serializable{
 			
 			usuario = sesion.getUsuario();
 			clienteEJB.modificaCliente(empresa, usuario);
+			
+			FacesMessage fm = new FacesMessage("La empresa ha sido eliminada con exito");
+			FacesContext.getCurrentInstance().addMessage("EmpresaEliminar:empresaEliminarClick", fm);
+			
 			return "mainAdmin.xhtml";
 			
 		}catch (UsuarioNoEncontrado e) {
