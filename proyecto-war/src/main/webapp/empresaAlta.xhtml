@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+       <title>Pagina web</title>
+</h:head>
+
+<h:body>
+       <h1><h:outputText id="saludo" value="Dar de alta a un cliente empresa"/></h1>
+
+       <h:form id="empresaAlta">
+              <h:outputText value="Introduzca los datos"/>
+              <h:panelGrid columns="3">
+
+              <h:commandButton id="empresaAltaClick" value="BotonAltaCliente" action="#{empresaAlta.empresaAlta()}" class="buttons"/>
+
+              <h:outputText value="Razon social:"/>
+              <h:inputText id="razonSocial" required="true" value="#{empresaAlta.empresa.razon_Social}" class="controls"/>
+              <h:message id="razonSocialMessage" for="razonSocial"/>
+
+              <h:outputText value="Identificacion:"/>
+              <h:inputText id="identificacion" required="true" value="#{empresaAlta.empresa.id}" class="controls"/>
+              <h:message id="identificacionMessage" for="identificacion"/>
+
+
+              <h:outputText value="Tipo de Cliente:"/>
+              <h:inputText id="tipoCliente" required="true" value="#{empresaAlta.empresa.tipoCliente}" class="controls"/>
+              <h:message id="tipoClienteMessage" for="tipoCliente"/>
+
+              <h:outputText value="Estado:"/>
+              <h:inputText id="estado" required="true" value="#{empresaAlta.empresa.estado}" class="controls"/>
+              <h:message id="estadoMessage" for="estado"/>
+
+              <h:outputText value="Fecha de alta(yyyy-mm-dd):"/>
+              <h:inputText id="fechaAlta" required="true" value="#{empresaAlta.empresa.fechaAlta}" class="controls"/>
+              <h:message id="fechaAltaMessage" for="fechaAlta"/>
+
+              <h:outputText value="Fecha de baja(yyyy-mm-dd):"/>
+              <h:inputText id="fechaBaja" required="false" value="#{empresaAlta.empresa.fechaBaja}" class="controls"/>
+              <h:message id="fechaBajaMessage" for="fechaBaja"/>
+
+              <h:outputText value="Direccion:"/>
+              <h:inputText id="direccion" required="true" value="#{empresaAlta.empresa.direccion}" class="controls"/>
+              <h:message id="direccionMessage" for="direccion"/>
+
+              <h:outputText value="Ciudad:"/>
+              <h:inputText id="ciudad" required="true" value="#{empresaAlta.empresa.ciudad}" class="controls"/>
+              <h:message id="ciudadMessage" for="ciudad"/>
+
+              <h:outputText value="Pais:"/>
+              <h:inputText id="pais" required="true" value="#{empresaAlta.empresa.pais}" class="controls"/>
+              <h:message id="paisMessage" for="pais"/>
+
+              <h:outputText value="Codigo Postal:"/>
+              <h:inputText id="codigoPostal" required="true" value="#{empresaAlta.empresa.codigoPostal}" class="controls"/>
+              <h:message id="codigoPostalMessage" for="codigoPostal"/>
+        
+
+          </h:panelGrid>
+       </h:form>
+
+       <p>Para volver al inicio, pinche <h:link outcome="mainAdmin.xhtml">aquí</h:link></p>
+</h:body>
+
+</html>

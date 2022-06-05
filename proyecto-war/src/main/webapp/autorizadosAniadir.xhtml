@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+       <title>Pagina web</title>
+</h:head>
+<h:body>
+       <h1><h:outputText id="autorizadosAniadir" value="Aniadir autorizado"/></h1>
+       <h:form id="AutorizadosAniadir">
+              <h:outputText value="Introduzca los datos"/>
+              <h:panelGrid columns="3">
+              <h:commandButton id="autorizadosAniadirClick" value="BotonAutorizadoAniadir" action="#{autorizadosAniadir.autorizadosAniadir()}" class="buttons"/>
+
+              <h:outputText value="ID:"/>
+              <h:inputText id="idAutorizada" required="true" value="#{autorizadosAniadir.personaAut.id}" class="controls"/>
+              <h:message id="idAutorizadaMessage" for="idAutorizada"/>
+
+              <h:outputText value="Nombre:"/>
+              <h:inputText id="nombre" required="true" value="#{autorizadosAniadir.personaAut.nombre}" class="controls"/>
+              <h:message id="nombreMessage" for="nombre"/>
+
+              <h:outputText value="Apellidos:"/>
+              <h:inputText id="apellidos" required="true" value="#{autorizadosAniadir.personaAut.apellidos}" class="controls"/>
+              <h:message id="apellidosMessage" for="apellidos"/>
+
+              <h:outputText value="Direccion:"/>
+              <h:inputText id="direccion" required="true" value="#{autorizadosAniadir.personaAut.direccion}" class="controls"/>
+              <h:message id="direccionMessage" for="direccion"/>
+
+              <h:outputText value="Fecha Nacimiento(yyyy-mm-dd):"/>
+              <h:inputText id="fechaNacimiento" required="false" value="#{autorizadosAniadir.personaAut.fechaNacimiento}" class="controls"/>
+              <h:message id="fechaNacimientoMessage" for="fechaNacimiento"/>
+
+              <h:outputText value="Estado:"/>
+              <h:inputText id="estado" required="false" value="#{autorizadosAniadir.personaAut.estado}" class="controls"/>
+              <h:message id="estadoMessage" for="estado"/>
+
+              <h:outputText value="Fecha Inicio(yyyy-mm-dd):"/>
+              <h:inputText id="fechaInicio" required="false" value="#{autorizadosAniadir.personaAut.fechaInicio}" class="controls"/>
+              <h:message id="fechaInicioMessage" for="fechaInicio"/>
+
+              <h:outputText value="Fecha Fin(yyyy-mm-dd):"/>
+              <h:inputText id="fechaFin" required="false" value="#{autorizadosAniadir.personaAut.fechaFin}" class="controls"/>
+              <h:message id="fechaFinMessage" for="fechaFin"/>
+
+
+          </h:panelGrid>
+       </h:form>
+
+       <p>Para volver al inicio, pinche <h:link outcome="mainAdmin.xhtml">aquí</h:link></p>
+</h:body>
+</html>

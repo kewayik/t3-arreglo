@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+       <title>Pagina web</title>
+</h:head>
+<h:body>
+       <h1><h:outputText id="cuentaSegregadaAbrir" value="Abrir una cuenta segregada"/></h1>
+       <h:form id="CuentaSegregadaAbrir">
+              <h:outputText value="Introduzca los datos"/>
+              <h:panelGrid columns="3">
+              <h:commandButton id="cuentaSegregadaAbrirClick" value="BotonAltaCliente" action="#{cuentaSegregadaAbrir.cuentaSegregadaAbrir()}" class="buttons"/>
+
+              <h:outputText value="IBAN:"/>
+              <h:inputText id="iban" required="true" value="#{cuentaSegregadaAbrir.seg.iban}" class="controls"/>
+              <h:message id="ibanMessage" for="iban"/>
+
+              <h:outputText value="SWIFT:"/>
+              <h:inputText id="swift" required="false" value="#{cuentaSegregadaAbrir.seg.swift}" class="controls"/>
+              <h:message id="swiftMessage" for="swift"/>
+
+              
+              <h:outputText value="Estado:"/>
+              <h:inputText id="estado" required="true" value="#{cuentaSegregadaAbrir.seg.estado}" class="controls"/>
+              <h:message id="estadoMessage" for="estado"/>
+
+              <h:outputText value="Fecha Apertura:"/>
+              <h:inputText id="fechaApertura" required="true" value="#{cuentaSegregadaAbrir.seg.fechaApertura}" class="controls"/>
+              <h:message id="fechaAperturaMessage" for="fechaApertura"/>
+
+              <h:outputText value="Fecha Cierre:"/>
+              <h:inputText id="fechaCierre" required="false" value="#{cuentaSegregadaAbrir.seg.fechaCierre}" class="controls"/>
+              <h:message id="fechaCierreMessage" for="fechaCierre"/>
+
+              <h:outputText value="Clasificacion:"/>
+              <h:inputText id="clasificacion" required="false" value="#{cuentaSegregadaAbrir.seg.clasificacion}" class="controls"/>
+              <h:message id="clasificacionMessage" for="clasificacion"/>
+
+              <h:outputText value="comision:"/>
+              <h:inputText id="comision" required="false" value="#{cuentaSegregadaAbrir.seg.comision}" class="controls"/>
+              <h:message id="comisionMessage" for="comision"/>
+
+          </h:panelGrid>
+       </h:form>
+
+       <p>Para volver al inicio, pinche <h:link outcome="mainAdmin.xhtml">aquí</h:link></p>
+</h:body>
+</html>

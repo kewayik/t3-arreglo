@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+       <title>Pagina web</title>
+</h:head>
+<h:body>
+       <h1><h:outputText id="cuentaPooledAbrir" value="Abrir una cuenta pooled"/></h1>
+       <h:form id="CuentaPooledAbrir">
+              <h:outputText value="Introduzca los datos"/>
+              <h:panelGrid columns="3"></h:panelGrid>
+              <h:commandButton id="cuentaPooledAbrirClick" value="BotonCuentaPooledAbrir" action="#{cuentaPooledAbrir.cuentaPooledAbrir()}" class="buttons"/>
+
+              <h:outputText value="IBAN:"/>
+              <h:inputText id="iban" required="true" value="#{cuentaPooledAbrir.pol.iban}" class="controls"/>
+              <h:message id="ibanMessage" for="iban"/>
+
+              <h:outputText value="SWIFT:"/>
+              <h:inputText id="swift" required="false" value="#{cuentaPooledAbrir.pol.swift}" class="controls"/>
+              <h:message id="swiftMessage" for="swift"/>
+
+              <h:outputText value="Estado:"/>
+              <h:inputText id="estado" required="true" value="#{cuentaPooledAbrir.pol.estado}" class="controls"/>
+              <h:message id="estadoMessage" for="estado"/>
+
+              <h:outputText value="Fecha Apertura:"/>
+              <h:inputText id="fechaApertura" required="true" value="#{cuentaPooledAbrir.pol.fechaApertura}" class="controls"/>
+              <h:message id="fechaAperturaMessage" for="fechaApertura"/>
+
+              <h:outputText value="Fecha Cierre:"/>
+              <h:inputText id="fechaCierre" required="false" value="#{cuentaPooledAbrir.pol.fechaCierre}" class="controls"/>
+              <h:message id="fechaCierreMessage" for="fechaCierre"/>
+
+              <h:outputText value="Clasificacion:"/>
+              <h:inputText id="clasificacion" required="false" value="#{cuentaPooledAbrir.pol.clasificacion}" class="controls"/>
+              <h:message id="clasificacionMessage" for="clasificacion"/>
+
+       </h:form>
+
+       <p>Para volver al inicio, pinche <h:link outcome="mainAdmin.xhtml">aquí</h:link></p>
+          
+</h:body>
+</html>

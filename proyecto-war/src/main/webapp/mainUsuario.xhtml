@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+       <title>Página Main</title>
+</h:head>
+
+<h:body>
+       <h1><h:outputText value="Página Usuario"/></h1>
+
+              <h:outputText id="saludo" value="Aquí podrás usar tu aplicación"/>
+              <br/>
+
+              <!--RF 14-->
+              <br><h:button outcome ="transaccionGenerar.xhtml" id="transaccionGenerar" value="Generar transaccion" class="buttons"/> </br>
+              <br><h:button outcome ="verCuentas.xhtml" id="verCuentas" value="Ver cuentas" class="buttons"/> </br>
+              <br><h:button outcome ="index.xhtml" id="cerrarSes" value="Cerrar sesión" class="buttons"/> </br>       
+
+
+
+
+
+
+
+
+
+
+
+
+</h:body>
+
+</html>

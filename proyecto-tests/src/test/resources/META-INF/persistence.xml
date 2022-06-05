@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" 
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="ProyectoIT" transaction-type="RESOURCE_LOCAL">
+    	<class>uma.wow.proyecto.Autorizacion</class>
+		<class>uma.wow.proyecto.AutorizacionPK</class>
+		<class>uma.wow.proyecto.Cliente</class>
+		<class>uma.wow.proyecto.Cuenta</class>
+		<class>uma.wow.proyecto.CuentaFintech</class>
+		<class>uma.wow.proyecto.CuentaReferencia</class>
+		<class>uma.wow.proyecto.DepositadaEn</class>
+		<class>uma.wow.proyecto.DepositaEnPK</class>
+		<class>uma.wow.proyecto.Divisa</class>
+		<class>uma.wow.proyecto.Empresa</class>
+		<class>uma.wow.proyecto.PersonaAutorizada</class>
+		<class>uma.wow.proyecto.PooledAccount</class>
+		<class>uma.wow.proyecto.Transaccion</class>
+		<class>uma.wow.proyecto.Individual</class>
+		<class>uma.wow.proyecto.Usuario</class>
+		<class>uma.wow.proyecto.Segregada</class>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <properties>
+    	<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+    	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sii"/>
+		<property name="javax.persistence.jdbc.user" value="siiuser"/>
+		<property name="javax.persistence.jdbc.password" value="siipassword"/>
+		<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+    </properties>
+  </persistence-unit>
+</persistence>

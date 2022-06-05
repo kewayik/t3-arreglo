@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<h:head>
+       <title>Página Main Admin</title>
+</h:head>
+
+<h:body>
+	<c:choose>
+		<c:when test="#{empty infoSesion.usuario}">
+			<p>No está autenticado, pinche <h:link outcome="index.xhtml">aquí</h:link> para iniciar sesión</p>
+		</c:when>
+		
+		<c:otherwise>
+       		<h1><h:outputText value="Página Administrador"/></h1>
+
+              <h:outputText id="saludo" value="Aquí podrás administrar tu aplicación"/>
+              <br/>
+
+              <!--RF 2-->
+              <br><h:button outcome ="individualAlta.xhtml" id="individualAlta" value="Dar de alta a un individual" class="buttons"/> </br>
+              <br><h:button outcome ="empresaAlta.xhtml" id="empresaAlta" value="Dar de alta a una empresa" class="buttons"/> </br>
+
+              <!--RF 3-->
+              <br><h:button outcome ="individualModificar.xhtml" id="individualModificar" value="Modificar a un individual" class="buttons"/> </br>
+              <br><h:button outcome ="empresaModificar.xhtml" id="empresaModificar" value="Modificar a una empresa" class="buttons"/> </br>
+
+              <!--RF 4-->
+              <br><h:button outcome ="individualEliminar.xhtml" id="individualEliminar" value="Dar de baja a un individual" class="buttons"/> </br>
+              <br><h:button outcome ="empresaEliminar.xhtml" id="empresaEliminar" value="Dar de baja a una empresa" class="buttons"/> </br>
+
+              <!--RF 5-->
+              <br><h:button outcome ="cuentaSegregadaAbrir.xhtml" id="cuentaSegregadaAbrir" value="Abrir cuenta segregada" class="buttons"/> </br>
+              <br><h:button outcome ="cuentaPooledAbrir.xhtml" id="cuentaPooledAbrir" value="Abrir cuenta pooled" class="buttons"/> </br>
+
+              <!--RF 6-->
+              <br><h:button outcome ="autorizadosAniadir.xhtml" id="autorizadosAniadir" value="Añadir autorizado a cuenta" class="buttons"/> </br>
+
+              <!--RF 7-->
+              <br><h:button outcome ="autorizadosModificar.xhtml" id="autorizadosModificar" value="Modificar autorizado" class="buttons"/> </br>
+
+              <!--RF 8-->
+              <br><h:button outcome ="autorizadosEliminar.xhtml" id="autorizadosEliminar" value="Eliminar autorizado" class="buttons"/> </br>
+
+              <!--RF 9-->
+              <br><h:button outcome ="cuentaSegregadaCerrar.xhtml" id="cuentaSegregadaCerrar" value="Cerrar cuenta segregada" class="buttons"/> </br>
+              <br><h:button outcome ="cuentaPooledCerrar.xhtml" id="cuentaPooledCerrar" value="Cerrar cuenta pooled" class="buttons"/> </br>
+
+              <!--RF 12-->
+              <br><h:button outcome ="infomeAlemaniaGenerar.xhtml" id="infomeAlemaniaGenerar" value="Generar informe Alemania" class="buttons"/> </br>
+              <br><h:button outcome ="index.xhtml" id="cerrarSes" value="Cerrar sesión" class="buttons"/> </br>
+              
+
+              <!--RF 16-->
+              <!--Por implementar-->
+
+			</c:otherwise>
+	</c:choose>
+
+
+
+
+
+
+
+
+
+
+</h:body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+       <title>Pagina web</title>
+</h:head>
+<h:body>
+       <h1><h:outputText id="autorizadosEliminar" value="Eliminar autorizado"/></h1>
+       <h:form id="AutorizadosEliminar">
+              <h:outputText value="Introduzca la identificacion"/>
+              <h:panelGrid columns="3">
+              <h:commandButton id="autorizadosEliminarClick" value="BotonAutorizadoEliminar" action="#{autorizadosEliminar.autorizadosEliminar()}" class="buttons"/>
+
+              <h:outputText value="ID:"/>
+              <h:inputText id="idAutorizada" required="true" value="#{autorizadosEliminar.personaAut.id}" class="controls"/>
+              <h:message id="idAutorizadaMessage" for="idAutorizada"/>
+
+
+          </h:panelGrid>
+       </h:form>
+       <p>Para volver al inicio, pinche <h:link outcome="mainAdmin.xhtml">aquí</h:link></p>
+</h:body>
+</html>
