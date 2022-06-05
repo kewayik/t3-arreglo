@@ -99,7 +99,7 @@ public class ClienteEJB implements GestionCliente{
             oldCliente.setUsuario(cliente.getUsuario());
             oldCliente.setNombre(cliente.getNombre());
             oldCliente.setApellido(cliente.getApellido());
-            oldCliente.setFecha_nacimiento((String) cliente.getFechaNacimiento());
+            oldCliente.setFechaNacimiento((String) cliente.getFechaNacimiento());
 		
 	}
 

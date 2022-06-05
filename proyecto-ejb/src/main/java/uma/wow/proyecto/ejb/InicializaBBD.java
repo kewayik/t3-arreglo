@@ -345,7 +345,7 @@ public class InicializaBBD {
 		individual.setCiudad("Malaga");
 		individual.setCodigoPostal("29001");
 		individual.setPais("España");
-		individual.setFecha_nacimiento(null);
+		individual.setFechaNacimiento(null);
 		
 		PersonaAutorizada autorizada = new PersonaAutorizada();
 		autorizada.setId("Y4001267V");

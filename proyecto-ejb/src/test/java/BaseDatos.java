@@ -46,7 +46,7 @@ public class BaseDatos {
 		individual.setPais("España");
 		individual.setNombre("Jammal");
 		individual.setApellido("Hasbullah");
-		individual.setFecha_nacimiento(null);
+		individual.setFechaNacimiento(null);
 		individual.setUsuario(usuario);
 		List<CuentaFintech> lista = new ArrayList<CuentaFintech>();
 		individual.setCuentas(lista);
@@ -191,7 +191,7 @@ public class BaseDatos {
 		individualParaUsuario.setPais("España");
 		individualParaUsuario.setNombre("Jamal");
 		individualParaUsuario.setApellido("Peterh");
-		individualParaUsuario.setFecha_nacimiento(null);
+		individualParaUsuario.setFechaNacimiento(null);
 		
 		usuarioIndividual.setCliente(individualParaUsuario);
 		em.persist(usuarioIndividual);
@@ -271,7 +271,7 @@ public class BaseDatos {
 		individualTrans.setPais("España");
 		individualTrans.setNombre("Jamal");
 		individualTrans.setApellido("Peterh");
-		individualTrans.setFecha_nacimiento(null);
+		individualTrans.setFechaNacimiento(null);
 		
 		List<CuentaFintech> listaTrans = new ArrayList<CuentaFintech>();
 		CuentaFintech cuentaTrans = new CuentaFintech();
